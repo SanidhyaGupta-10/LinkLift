@@ -29,7 +29,8 @@ const Page = () => {
       .then((result) => {
         seturl("");
         setshorturl("");
-        setgenerated(`${process.env.NEXT_PUBLIC_HOST}/${shorturl}`);
+        // Use window.location to get the current host
+        setgenerated(`${window.location.origin}/${shorturl}`);
         console.log(result);
         alert(result.message);
       })

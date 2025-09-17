@@ -34,3 +34,26 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Environment Setup
+
+Create a `.env.local` file in the root directory with the following variables:
+
+```env
+MONGODB_URI=your_mongodb_connection_string
+NEXT_PUBLIC_HOST=
+```
+
+For local development:
+- Set `MONGODB_URI` to your local MongoDB instance (e.g., `mongodb://localhost:27017`)
+- `NEXT_PUBLIC_HOST` can be left empty
+
+For production hosting:
+- Set `MONGODB_URI` to your MongoDB Atlas connection string or other hosted MongoDB service
+- `NEXT_PUBLIC_HOST` can be left empty as the application will automatically detect the host
+
+## MongoDB Setup
+
+1. Install MongoDB locally or create a free MongoDB Atlas cluster
+2. Update the `MONGODB_URI` in your `.env.local` file with your connection string
+3. The application will automatically create a database named "LinkLift" with a collection named "url"

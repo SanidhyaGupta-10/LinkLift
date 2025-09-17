@@ -7,14 +7,14 @@ export default async function Page({ params }) {
     const db = client.db("LinkLift")
     const collection = db.collection("url")
 
-       const doc = await collection.findOne({ shorturl: shorturl })
+    const doc = await collection.findOne({ shorturl: shorturl })
     if (doc) {
         redirect(doc.url)
     }
     else{
-        redirect(`${process.env.NEXT_PUBLIC_HOST}`)
+        // Redirect to home page if short URL not found
+        redirect('/')
     }
 
-
-    return <div>My Post: {url}</div>
+    return <div>My Post: {shorturl}</div>
 }
