@@ -1,39 +1,44 @@
 import Image from "next/image";
+import localFont from "next/font/local";
 import Link from "next/link";
 
-export default function Home() {
+export default function Home(){
   return (
-   <>
-    <main>
-      <section className="grid grid-cols-2 ">
-        <div className="flex flex-col justify-center h-full pl-30">
-          <h1 className="text-5xl font-bold mb-4 text-center">Welcome to LinkLift</h1>
-          <p className="text-lg mb-4 text-center">
-            Your ultimate URL shortening and link management platform. Simplify,
-            track, and optimize your links with ease.
-          </p>
-        <div className="flex space-x-4 justify-center">
-           <Link href='/features'><button className='relative px-6 py-3 font-semibold text-white rounded-lg 
-         bg-gradient-to-r from-teal-400 via-cyan-500 to-blue-500 
-         bg-[length:200%_200%] animate-gradient-x 
-         shadow-lg hover:scale-105 transition-transform duration-300 '>Try Now</button></Link>
-           <Link target="_blank" href='https://github.com/SanidhyaGupta-10/GetMeeChaii'><button className='relative px-6 py-3 font-semibold text-white rounded-lg 
-         bg-gradient-to-r from-teal-400 via-cyan-500 to-blue-500 
-         bg-[length:200%_200%] animate-gradient-x 
-         shadow-lg hover:scale-105 transition-transform duration-300  '>Github</button></Link>
-        </div>
-        </div>
-        <div>
-          <Image
-            src="/vector.png"
-            alt="LinkLift Logo"
-            width={600}
-            height={400}
-            className="mx-auto my-4"
-          />
-        </div>
-      </section>
-    </main>
-   </>
-  );
+    <section className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center px-4 md:px-16 py-10">
+  <div className="flex flex-col justify-center h-full ml-20">
+    <h1 className="text-3xl md:text-5xl font-bold mb-4 text-center md:text-left">Welcome to LinkLift</h1>
+    <p className="text-base md:text-lg mb-6 text-center md:text-left">
+      Your ultimate URL shortening and link management platform. Simplify,
+      track, and optimize your links with ease.
+    </p>
+    <div className="flex flex-col md:flex-row gap-4 justify-center md:justify-start">
+      <Link href='/features'>
+        <button className='relative px-6 py-3 font-semibold text-white rounded-lg 
+          bg-gradient-to-r from-teal-400 via-cyan-500 to-blue-500 
+          bg-[length:200%_200%] animate-gradient-x 
+          shadow-lg hover:scale-105 transition-transform duration-300 w-full md:w-auto'>
+          Try Now
+        </button>
+      </Link>
+      <Link target="_blank" href='https://github.com/SanidhyaGupta-10/GetMeeChaii'>
+        <button className='relative px-6 py-3 font-semibold text-white rounded-lg 
+          bg-gradient-to-r from-teal-400 via-cyan-500 to-blue-500 
+          bg-[length:200%_200%] animate-gradient-x 
+          shadow-lg hover:scale-105 transition-transform duration-300 w-full md:w-auto'>
+          Github
+        </button>
+      </Link>
+    </div>
+  </div>
+  <div className="flex justify-center">
+    <Image
+      src="/vector.png"
+      alt="LinkLift Logo"
+       width={400}
+      height={300}
+      className="mx-auto my-4 w-full max-w-xs md:max-w-lg h-auto"
+    />
+  </div>
+</section>
+  )
 }
