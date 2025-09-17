@@ -20,6 +20,11 @@ const eslintConfig = [
       "next-env.d.ts",
     ],
   },
+  {
+  "rules": {
+    "rule-name": "off"
+  }
+}
 ];
 
 export default eslintConfig;
