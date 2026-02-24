@@ -31,11 +31,6 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Link href="/about" onClick={() => setMenuOpen(false)}>
-              <span className="hover:underline py-2.5 font-bold block">About</span>
-            </Link>
-          </li>
-          <li>
             <Link href="/shortens" onClick={() => setMenuOpen(false)}>
               <span className="hover:underline py-2.5 font-bold block">Shortens</span>
             </Link>
